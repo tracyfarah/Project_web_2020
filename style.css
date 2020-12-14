@@ -10,7 +10,7 @@
       font-family: 'Titillium Web', sans-serif;
   }
   
-  .form {
+  .container {
       background: rgba(19, 35, 47, 0.9);
       padding: 40px;
       max-width: 600px;
@@ -56,7 +56,7 @@
     background: #604264;
     color: #aea0b3;
   }
-  
+
   h1 {
       text-align: center;
       color: #ffffff;
