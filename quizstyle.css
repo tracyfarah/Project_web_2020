@@ -36,7 +36,7 @@ strong {
 }
 
 h1 {
-    font: normal bold 2em/1.8em "Poppins" sans-serif;
+    font: normal bold 2em/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     border-bottom: 1px solid #999;
     padding: 0;
@@ -104,4 +104,8 @@ p.pager {
 .hover:hover{
     background-color: rgb(51, 196, 188);
     border-color: lightseagreen;
+}
+
+.bt_choice, .bt_cat{
+    display: grid;
 }
