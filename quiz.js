@@ -99,11 +99,13 @@ $(document).ready(function f() {
                                 score = score + 100;
                             }
                             console.log(score);
-                            $("#selected").css("background-color", "#29bb66");
+                            $("#selected").css("background-color", "limegreen");
+                            $("#selected").css("border-color", "green");
                         }
                         else {
                             console.log("wrong");
-                            $("#selected").css("background-color", "#e42a2a")
+                            $("#selected").css("background-color", "red");
+                            $("#selected").css("border-color", "darkred");
                         }
                         $(this).html("Next Question");
                     }

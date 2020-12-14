@@ -1,15 +1,7 @@
-
-html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p{
+*, *:before, *::after{
+    box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p{
     border: 0;
     font-size: 100%;
     font: inherit;
@@ -20,25 +12,31 @@ p{
 body {
     line-height: 1;
     font: normal 0.9em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 strong {
     font-weight: 700;
 }
 
-#frame {
+.container {
     position: fixed;
     left: 25%;
     top: 3%;
     width: 620px;
+    max-width: 80%;
     border: 1px solid #ccc;
-    background: #fff;
-    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
     margin: 3px;
+    box-shadow: 0 0 10px 2px;
 }
 
 h1 {
-    font: normal bold 2em/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal bold 2em/1.8em "Poppins" sans-serif;
     text-align: left;
     border-bottom: 1px solid #999;
     padding: 0;
@@ -65,8 +63,8 @@ p.pager {
 }
 
 #selected{
-    background-color: #c5c1c7;
-    border-color: "#222";
+    background-color: lightseagreen;
+    border-color: rgb(20, 145, 138);
     font-weight: 700
 }
 
@@ -75,8 +73,10 @@ p.pager {
 }
 
 #bt_submit, #bt_go{
+    margin-top: 30px;
     background: #b086c4;
     font-weight: 700;
+    border-color: #ad70c9;
     color: rgb(34, 34, 34);
     padding: 30px 0px;
 }
@@ -91,21 +91,17 @@ p.pager {
     display: block;
     text-align: center;
     margin: 8px auto;
-    padding: 10px 0;
+    padding: 8px 10px ;
     border: 1px solid #666;
-    cursor: pointer;
     border-radius: 5px;
+    border-width: 2px;
+    outline: none;
+    cursor: pointer;
+    background-color:lightskyblue;
+    border-color: lightseagreen;
+
 }
 .hover:hover{
-    background-color: #c5c1c7;
-}
-
-#loader{
-    position: fixed;
-    left: 46%;
-    top: 41%;
-    display: none;
-    z-index: 1000;
-    height: 31px;
-    width: 31px;
+    background-color: rgb(51, 196, 188);
+    border-color: lightseagreen;
 }
