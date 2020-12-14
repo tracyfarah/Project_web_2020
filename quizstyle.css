@@ -109,3 +109,26 @@ p.pager {
 .bt_choice, .bt_cat{
     display: grid;
 }
+
+#joker{
+    margin-left: 500px;
+    margin-bottom: 5px;
+    padding: 8px 10px ;
+    border: 1px solid #666;
+    border-radius: 5px;
+    border-width: 2px;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    background: pink;
+    border-color: palevioletred;
+}
+
+#joker:hover{
+    background:palevioletred;
+}
+
+#left{
+    font-style: italic;
+    margin-left: 507px;
+}

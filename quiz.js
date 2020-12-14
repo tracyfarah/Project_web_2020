@@ -2,22 +2,22 @@ let i = 0;
 let score = 0;
 let cat_number = localStorage["category"];
 let selected_category = localStorage["select_cat"];
-let beforesend=false;
+let beforesend = false;
 $(document).ready(function f() {
     $.ajax({
         url: `https://opentdb.com/api.php?amount=10&category=${cat_number}`,
         dataType: "json",
-        beforeSend: function(){
-            if(beforesend==false){
-            $("#loader").show();
-            $("#frame").hide();
-            beforesend=true
+        beforeSend: function () {
+            if (beforesend == false) {
+                $("#loader").show();
+                $("#frame").hide();
+                beforesend = true
             }
-           },
-           complete:function(data){
+        },
+        complete: function (data) {
             $("#loader").hide();
             $("#frame").show();
-           },
+        },
         success: function (obj) {
             $('#quest_number span').html(i + 1);
             $("#category").html(selected_category);
@@ -50,13 +50,37 @@ $(document).ready(function f() {
                 ans.classList.add("hover");
                 $("#choices").append(ans);
             }
+            $("#joker").on("click", function(e){ //joker to skip a question
+                e.stopImmediatePropagation();
+                if ($("#skips_left").text() > 0) {
+                    if (confirm('Are you sure you want to skip this question?')) {
+                        $("#skips_left").text($("#skips_left").text() - 1);
+                        if (children.difficulty == 'easy') {
+                            score = score + 20;
+                        } else if (children.difficulty == 'medium') {
+                            score = score + 50;
+                        }
+                        else if (children.difficulty == 'hard') {
+                            score = score + 100;
+                        }
+                        i++;
+                        f();
+                    }else{
+                        return;
+                    }
+                }
+                else {
+                    alert("No more skips left.")
+                }
+            })
 
             let clicked = false;
 
             $(".bt_choice").on("click", function () {
                 $(".bt_choice").removeAttr("id", "selected");
                 $(this).attr("id", "selected");
-                $("#bt_submit").on("click", function () {
+                $("#bt_submit").on("click", function (e) {
+                    e.stopImmediatePropagation();
                     if (clicked) {
                         $(this).off("click");
                         i++;
