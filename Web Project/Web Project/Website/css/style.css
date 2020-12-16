@@ -1,0 +1,137 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Titillium Web", sans-serif;
+  background-image: url("../image/1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Gugi", cursive;
+}
+
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgb(96, 66, 100);
+  color: #aea0b3;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-group li a:hover {
+  background: #a05fa8;
+  color: #ffffff;
+}
+
+.tab-group .active a {
+  background: #c479ce;
+  color: #ffffff;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+input {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  background: none;
+  color: #ffffff;
+  border: 1px solid #a0b3b0;
+}
+
+input:focus {
+  outline: 0;
+  border-color: #c479ce;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  height: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #c479ce;
+  color: #ffffff;
+}
+
+.button:hover,
+.button:focus {
+  background: #a05fa8;
+  cursor: pointer;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+.forgot > a {
+  color: #f6cbfc;
+}

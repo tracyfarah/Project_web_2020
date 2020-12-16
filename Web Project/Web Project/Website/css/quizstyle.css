@@ -1,0 +1,179 @@
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+body {
+    background-image: url("../image/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.qquiz {
+    font-family: "Gugi", cursive;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: "Gugi", cursive;
+}
+
+body {
+    line-height: 1;
+    font-family: "Gugi", cursive;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.container {
+    position: fixed;
+    left: 25%;
+    top: 3%;
+    width: 620px;
+    max-width: 80%;
+    border: 1px solid #ccc;
+    background: rgba(225, 144, 250, 0.473);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 3px;
+    box-shadow: 0 0 10px 2px;
+}
+
+h1 {
+    font-family: "Gugi", cursive;
+    text-align: left;
+    border-bottom: 1px solid #999;
+    padding: 0;
+    width: auto;
+}
+
+h2 {
+    font-family: "Gugi", cursive;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p.pager {
+    margin: 5px 0 5px;
+    font-family: "Gugi", cursive;
+    color: rgb(110, 16, 110);
+    font-weight: bolder;
+}
+
+#choices {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#selected {
+    background-color: lightseagreen;
+    border-color: rgb(20, 145, 138);
+    font-weight: 700;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#bt_submit,
+#bt_go {
+    margin-top: 30px;
+    background: #b086c4;
+    font-weight: 700;
+    border-color: #ad70c9;
+    color: rgb(34, 34, 34);
+    padding: 30px 0px;
+}
+
+#bt_submit:hover,
+#bt_go:hover {
+    background: #9a61b4;
+}
+
+.btn {
+    font-family: "Gugi", cursive;
+    width: 100%;
+    margin-left: 50px;
+    display: block;
+    text-align: center;
+    margin: 8px auto;
+    padding: 8px 10px;
+    border: 1px solid rgba(119, 195, 224, 0.548);
+    border-radius: 5px;
+    border-width: 2px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(123, 233, 224, 0.582);
+    border-color: lightseagreen;
+}
+
+.hover:hover {
+    background-color: rgb(51, 196, 188);
+    border-color: lightseagreen;
+}
+
+.bt_choice,
+.bt_cat {
+    display: grid;
+}
+
+#joker {
+    margin-left: 500px;
+    margin-bottom: 5px;
+    padding: 8px 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    border-width: 2px;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    background: pink;
+    border-color: palevioletred;
+}
+
+#joker:hover {
+    background: palevioletred;
+}
+
+#left {
+    font-style: italic;
+    margin-left: 507px;
+}
+
+.playagain {
+    background-color: #74d0e091;
+    font-family: "Gugi", cursive;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.playagain:hover {
+    transform: scale(1.023);
+}
+
+#frame {
+    font-family: "Gugi", cursive;
+}

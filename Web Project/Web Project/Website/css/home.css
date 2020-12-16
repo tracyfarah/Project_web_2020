@@ -1,0 +1,275 @@
+.browse:hover {
+  background-color: rgb(153, 37, 147);
+  color: white;
+  transform: scale(1.023);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+
+.browse {
+  color: white;
+  background-color: rgb(153, 37, 147);
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+}
+
+.trans2 {
+  padding-bottom: 20px;
+  border-radius: 25px;
+  background-color: rgba(176, 97, 187, 0.425);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.tran {
+  padding-bottom: 20px;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.txt {
+  font-size: xx-large;
+}
+
+body {
+  background-image: url("../image/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Gugi", cursive;
+}
+
+.menu-bar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  background-color: rgba(211, 87, 201);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.menu-bar li {
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.menu-bar li:hover {
+  color: black;
+}
+
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0px 3px 20px 0px black;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.currentpage {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0px 3px 20px 0px black;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  border-radius: 20px;
+}
+
+a:active {
+  transform: scale(0.95);
+}
+
+a:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", "Segoe UI",
+    "Calibri", "Arial", sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+
+@media (min-width: 768px) {
+  .select-box {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .select-box {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .select-box {
+    width: 30%;
+  }
+}
+
+.select-box__current {
+  position: relative;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  -webkit-animation-name: none;
+  animation-name: none;
+}
+
+.select-box__current:focus
+  + .select-box__list
+  .select-box__option {
+  cursor: pointer;
+}
+
+.select-box__current:focus .select-box__icon {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.select-box__value {
+  display: -webkit-box;
+  display: flex;
+}
+
+.select-box__input {
+  display: none;
+}
+
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(205, 139, 214);
+}
+
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  -webkit-animation-name: HideList;
+  animation-name: HideList;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: step-start;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color: rgba(205, 139, 214);
+}
+
+.select-box__option:hover,
+.select-box__option:focus {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
+
+@-webkit-keyframes HideList {
+  from {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes HideList {
+  from {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.grid {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+  counter-reset: div;
+}
+
+.grid div {
+  text-align: center;
+  margin-left: 2em;
+  margin-right: 2em;
+}
