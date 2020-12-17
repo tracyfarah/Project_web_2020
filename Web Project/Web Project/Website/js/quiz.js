@@ -109,7 +109,7 @@ $(document).ready(function f() {
               $("#frame").append(bt_home);
               $(bt_playagain).on("click", () => {
                 i = 0;
-                window.location.href = "./category.html";
+                window.location.href = "./category.php";
               });
               $(bt_home).on("click", () => {
                 window.location.href = "./home.php";

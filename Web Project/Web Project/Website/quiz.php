@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  
   <link rel="stylesheet" href="./css/quizstyle.css" />
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 </head>
@@ -13,11 +13,10 @@
     <h6>Loading...</h6>
   </div>
   <div id="frame" class="container" hidden>
-    <h1>Quiz Title</h1>
-    <h2>
+    <h1>
       Category:
       <span id="category" style="font-weight: bold"></span>
-    </h2>
+    </h1>
     <p class="pager" id="quest_number">
       Question <span></span> of 10
     </p>
