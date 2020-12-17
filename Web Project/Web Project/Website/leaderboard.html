@@ -1,124 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link rel="stylesheet" href="css/home.css" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
 
-    <script>
-      function showUser(str) {
-        if (str == "") {
-          document.getElementById("table").innerHTML = "";
-          return;
-        } else {
-          var xmlhttp = new XMLHttpRequest();
-          xmlhttp.onreadystatechange = function () {
-            if (
-              this.readyState == 4 &&
-              this.status == 200
-            ) {
-              document.getElementById(
-                "table"
-              ).innerHTML = this.responseText;
-            }
-          };
-          xmlhttp.open(
-            "GET",
-            "./php/leaderboarddb.php?q=" + str,
-            true
-          );
-          xmlhttp.send();
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+
+  <script>
+    function showUser(str) {
+      if (str == "") {
+        document.getElementById("table").innerHTML = "";
+        return;
+      } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (
+            this.readyState == 4 &&
+            this.status == 200
+          ) {
+            document.getElementById(
+              "table"
+            ).innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open(
+          "GET",
+          "./php/leaderboarddb.php?q=" + str,
+          true
+        );
+        xmlhttp.send();
       }
-    </script>
-    <title>Document</title>
-  </head>
-  <style>
-    table,
-    th,
-    td {
-      background-color: rgba(205, 139, 214, 0.719);
     }
+  </script>
+  <title>Document</title>
+</head>
+<style>
+  table,
+  th,
+  td {
+    background-color: rgba(205, 139, 214, 0.719);
+  }
 
-    select {
-      margin-left: 450px;
-      background-color: rgba(243, 7, 243, 0.5);
-      width: 200px;
-      height: 30px;
-      font-weight: bold;
-    }
+  select {
+    margin-left: 450px;
+    background-color: rgba(243, 7, 243, 0.5);
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+  }
 
-    option {
-      background-color: rgba(209, 15, 235, 0.548);
-    }
+  option {
+    background-color: rgba(209, 15, 235, 0.548);
+  }
 
-    td {
-      height: 49px;
-      width: 200px;
-    }
-    td img {
-      width: 50px;
-      height: 50px;
-    }
-  </style>
+  td {
+    height: 49px;
+    width: 200px;
+  }
 
-  <body>
-    <div style="margin-left: 30%">
-      <ul class="menu-bar">
-        <a href="./home.php">
-          <li>Home</li>
-        </a>
-        <a href="./discord.html">
-          <li>Discord</li>
-        </a>
-        <a href="./leaderboard.html">
-          <li class="currentpage">Leaderboard</li>
-        </a>
-        <a href="./profile.php">
-          <li>Profile</li>
-        </a>
-      </ul>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <div>
-      <select
-        onchange="showUser(this.value)"
-        style="margin-left: 40%"
-      >
-        <option value="0">General LeaderBoard</option>
-        <option value="9">General Knowledge</option>
-        <option value="11">Entertainement: Film</option>
-        <option value="12">Entertainement: Music</option>
-        <option value="15">
-          Entertainement: Video Games
-        </option>
-        <option value="17">Science and Nature</option>
-        <option value="20">Mythology</option>
-        <option value="21">Sports</option>
-        <option value="22">Geography</option>
-        <option value="23">History</option>
-        <option value="27">Animals</option>
-      </select>
-    </div>
-    <br />
-    <br />
-    <br />
+  td img {
+    width: 50px;
+    height: 50px;
+  }
+</style>
 
-    <div class="tran" id="table"></div>
-  </body>
+<body>
+  <div style="margin-left: 30%">
+    <ul class="menu-bar">
+      <a href="./home.php">
+        <li>Home</li>
+      </a>
+      <a href="./discord.html">
+        <li>Discord</li>
+      </a>
+      <a href="./leaderboard.html">
+        <li class="currentpage">Leaderboard</li>
+      </a>
+      <a href="./profile.php">
+        <li>Profile</li>
+      </a>
+    </ul>
+  </div>
+  <br /><br /><br /><br />
+  <div>
+    <select onchange="showUser(this.value)" style="margin-left: 40%">
+      <option value="0">General LeaderBoard</option>
+      <option value="9">General Knowledge</option>
+      <option value="11">Entertainement: Film</option>
+      <option value="12">Entertainement: Music</option>
+      <option value="15">
+        Entertainement: Video Games
+      </option>
+      <option value="17">Science and Nature</option>
+      <option value="20">Mythology</option>
+      <option value="21">Sports</option>
+      <option value="22">Geography</option>
+      <option value="23">History</option>
+      <option value="27">Animals</option>
+    </select>
+  </div>
+  <br /><br /><br />
+
+  <div class="tran" id="table"></div>
+</body>
+
 </html>
