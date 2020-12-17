@@ -14,6 +14,7 @@ if (isset($_COOKIE['cookie_username_project'])) {
   <link href="css/style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+  <title>exQUIZ IT</title>
 </head>
 
 <body>

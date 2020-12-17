@@ -9,6 +9,7 @@
       font-family: "Gugi", cursive;
     }
   </style>
+  <title>Choose your Category</title>
 </head>
 
 <body>

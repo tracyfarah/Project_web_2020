@@ -39,7 +39,7 @@ $(document).ready(function f() {
       children.incorrect_answers.forEach((val) => {
         answers.push(val);
       });
-      answers = answers.sort(() => Math.random() - 0.5);
+      answers = answers.sort(() => Math.random() - 0.5); //shuffle answers
       for (let j = 0; j < answers.length; j++) {
         let ans = document.createElement("button");
         ans.innerHTML = answers[j];
@@ -51,7 +51,11 @@ $(document).ready(function f() {
       $("#joker").on("click", function (e) {
         e.stopImmediatePropagation();
         if ($("#skips_left").text() > 0) {
-          if (confirm("Are you sure you want to skip this question?")) {
+          if (
+            confirm(
+              "Are you sure you want to skip this question?"
+            )
+          ) {
             $("#skips_left").text(
               $("#skips_left").text() - 1
             );
@@ -83,7 +87,7 @@ $(document).ready(function f() {
             i++;
             if (i > 9) {
               $("#frame").html("");
-              $("#frame").append("Total Score: " + score);
+              $("#frame").html("<span style='font-size: 40px;'>Total Score: " + score + "</span>");
               console.log(score);
               console.log(cat_number);
               $.ajax({

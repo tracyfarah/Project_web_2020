@@ -12,8 +12,8 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="css/home.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-  <title>Document</title>
-  <style></style>
+  <title>exQUIZ IT</title>
+
 </head>
 
 <body>
@@ -33,11 +33,8 @@ if (!isset($_SESSION['username'])) {
       </a>
     </ul>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
 
+  <br><br><br><br>
 
   <div class="trans2">
     <table>
