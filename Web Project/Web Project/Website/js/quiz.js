@@ -39,7 +39,7 @@ $(document).ready(function f() {
       children.incorrect_answers.forEach((val) => {
         answers.push(val);
       });
-      answers = answers.sort(() => Math.random() - 0.5); //shuffle answers
+      answers = answers.sort(() => Math.random() - 0.5);
       for (let j = 0; j < answers.length; j++) {
         let ans = document.createElement("button");
         ans.innerHTML = answers[j];
@@ -49,14 +49,9 @@ $(document).ready(function f() {
         $("#choices").append(ans);
       }
       $("#joker").on("click", function (e) {
-        //joker to skip a question
         e.stopImmediatePropagation();
         if ($("#skips_left").text() > 0) {
-          if (
-            confirm(
-              "Are you sure you want to skip this question?"
-            )
-          ) {
+          if (confirm("Are you sure you want to skip this question?")) {
             $("#skips_left").text(
               $("#skips_left").text() - 1
             );
@@ -88,7 +83,7 @@ $(document).ready(function f() {
             i++;
             if (i > 9) {
               $("#frame").html("");
-              $("#frame").append("Total Score: " + score); //display score in a better way (html+css)
+              $("#frame").append("Total Score: " + score);
               console.log(score);
               console.log(cat_number);
               $.ajax({
@@ -100,15 +95,11 @@ $(document).ready(function f() {
                   id: playerID,
                 },
                 dataType: "text",
-                success: function () {},
+                success: function () { },
               });
-              let bt_playagain = document.createElement(
-                "button"
-              );
+              let bt_playagain = document.createElement("button");
               bt_playagain.innerHTML = "Play Again";
-              let bt_home = document.createElement(
-                "button"
-              );
+              let bt_home = document.createElement("button");
               bt_home.innerHTML = "Return to Main Page";
               bt_playagain.classList.add("playagain");
               bt_home.classList.add("playagain");
@@ -140,10 +131,7 @@ $(document).ready(function f() {
               } else if (children.difficulty == "hard") {
                 score = score + 100;
               }
-              $("#selected").css(
-                "background-color",
-                "limegreen"
-              );
+              $("#selected").css("background-color", "limegreen");
               $("#selected").css("border-color", "green");
             } else {
               $("#selected").css("background-color", "red");
